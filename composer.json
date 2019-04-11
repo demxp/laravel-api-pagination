@@ -1,5 +1,5 @@
 {
-    "name": "elemenx/laravel-api-pagination",
+    "name": "demxp/laravel-api-pagination",
     "type": "library",
     "version": "0.1.7",
     "description": "API Pagination For Laravel & Lumen",
