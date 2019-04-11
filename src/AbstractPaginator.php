@@ -4,11 +4,12 @@ namespace ElemenX\ApiPagination;
 
 use Closure;
 use Illuminate\Support\Collection;
+use Illuminate\Pagination\AbstractPaginator as APag;
 
 /**
  * @mixin \Illuminate\Support\Collection
  */
-abstract class AbstractPaginator
+abstract class AbstractPaginator extends APag
 {
     /**
      * All of the items being paginated.

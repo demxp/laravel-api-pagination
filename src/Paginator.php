@@ -79,17 +79,17 @@ class Paginator extends AbstractPaginator implements Arrayable, ArrayAccess, Cou
      *
      * @return array
      */
-    public function toArray()
+    public function toArray($key=null)
     {
+        if(is_null($key)) $key = 'data';
+
         return [
-            'data' => $this->items->toArray(),
-            'meta' => [
-                'limit' => $this->limit(),
-                'offset' => $this->offset(),
-                'count' => $this->count(),
-                'total' => $this->total()
-            ]
-        ];
+            $key => $this->items->toArray(),
+            'limit' => $this->limit(),
+            'offset' => $this->offset(),
+            'count' => $this->count(),
+            'total' => $this->total()
+        ];            
     }
 
     /**
